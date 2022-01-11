@@ -33,7 +33,7 @@ func (ah *AdminHandler) CreateAdmin(c echo.Context) error {
 	}
 
 	return c.JSON(http.StatusAccepted, map[string]interface{}{
-		"message": "success",
+		"message": "success berhasil",
 		"data":    admin_response.FromCore(result),
 	})
 }
