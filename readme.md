@@ -2,5 +2,5 @@
 =======
 #Testing Dokumentasi Dulu
 
-Fitur Admin kelar
+Fitur Admin kelars
 >>>>>>> Stashed changes
