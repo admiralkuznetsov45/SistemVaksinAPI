@@ -1,27 +1,21 @@
 package bussiness
 
 import (
-	"SistemVaksinAPI/features/faskes"
-	"SistemVaksinAPI/features/requestvaksin"
 	"SistemVaksinAPI/features/user"
-	mocks "SistemVaksinAPI/features/user/mocks"
-	"SistemVaksinAPI/features/vaksin"
+	mocksUser "SistemVaksinAPI/features/user/mocks"
 	"os"
 	"testing"
 )
 
 var (
-	userValue         user.UserCore
-	usersValue        []user.UserCore
-	userUseCase       user.Bussiness
-	userData          mocks.Data
-	vaksinUsecase     vaksin.Bussiness
-	faskesData        faskes.Bussiness
-	requestvaksinData requestvaksin.Bussiness
+	userValue   user.UserCore
+	usersValue  []user.UserCore
+	userUseCase user.Bussiness
+	userData    mocksUser.Data
 )
 
 func TestMain(m *testing.M) {
-	userUseCase = NewUserBussiness(&userData)
+	userUseCase = NewUserBussiness(&userData, &fas)
 
 	userValue = user.UserCore{
 		UserID:      1,
